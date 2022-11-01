@@ -1,0 +1,16 @@
+.content {
+    display: flex;
+    margin-top: 10px;
+  }
+  
+  figure {
+    width: 30%;
+  }
+  
+  section.maincontent {
+    width: 70%;
+  }
+  
+  footer {
+    margin-top: 10px;
+  }

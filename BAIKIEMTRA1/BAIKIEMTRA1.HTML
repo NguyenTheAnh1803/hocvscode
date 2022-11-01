@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Bài kiểm tra giữa kì</title>
+    <style type="text/css">
+        body{
+        border: 1px solid black;
+        width: 300px;
+        height: 280px;
+      }
+      #tabmenu {
+        overflow: hidden;
+        border: 1px solid black;
+        background-color: cadetblue;
+        justify-content: space-around;
+      }
+      * {
+        margin: 0;
+        padding: 0;
+       
+      }
+    
+      .content {
+        display: none;
+      }
+      .content.active {
+        display: block;
+      }
+      button {
+        background-color: cadetblue;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px;
+        transition: 0.3s;
+        font-size: 17px;
+      
+      }
+      button:hover {
+        background-color: red;
+      }
+      p {
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+      }
+      .nutbam.active{
+        background-color:green;
+      }
+    </style>
+   
+  </head>
+  <body>
+    <article id="tabmenu">
+      <button class="nutbam nutbam-menu1 active" data-tab="menu1">Menu 1</button>
+      <button class="nutbam nutbam-menu2" data-tab="menu2">Menu 2</button>
+      <button class="nutbam nutbam-menu3" data-tab="menu3">Menu 3</button>
+    </article>
+    <article id="menu1" class="content content-menu1 active">
+      <h1>Menu 1</h1>
+      <p>
+        Dữ liệu menu 1
+      </p>
+    </article>
+    <article id="menu2" class="content content-menu2">
+      <h1>Menu 2</h1>
+      <p>
+        Dữ liệu menu 2
+      </p>
+    </article>
+    <article id="menu3" class="content content-menu3">
+      <h1>Menu 3</h1>
+      <p>
+        Dữ liệu menu 3
+      </p>
+    </article>
+
+  </body>
+</html>
+     <script>
+                const tab = document.querySelector(".tabmenu");
+                const buttons = document.querySelectorAll(".nutbam");
+                const contents = document.querySelectorAll(".content");
+                const nutbam = document.querySelectorAll(".nutbam")
+
+                function onTabClick(event) {
+                contents.forEach((content) => {
+                    content.classList.remove("active");
+                });
+                nutbam.forEach((nut)=>{
+                    nut.classList.remove('active')
+                })
+                event.target.classList.add("active");
+                let classString = event.target.getAttribute("data-tab");
+                document
+                    .querySelector(`.content-${classString}`)
+                    .classList.add("active");
+                document.querySelector(`.nutbam-${classString}`).classList.add('active')
+                }
+                buttons.forEach((button) => {
+                button.addEventListener("click", onTabClick);
+                });
+
+    </script>

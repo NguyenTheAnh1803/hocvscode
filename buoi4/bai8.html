@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 8</title>
+    <style>
+
+        .main {
+            margin-top: 50px;
+            height:200px;
+            border: 2px solid #ccc;
+        }
+
+        form {
+           margin-top: 10px;
+           margin-left: 20px;
+        }
+       
+        #btn_primary {
+            margin-top:20px;  
+            margin-left: 120px;
+        }
+      
+        .input_mt {
+            margin-top:10px;
+        }
+        input:first-child {
+            margin-left: 20px;
+        }
+        input:nth-child(4) {
+            margin-left: 46px;
+        }
+        input:nth-child(10) {
+            margin-left: 54px;
+        }
+        label {
+            color: red;
+            font-size:10px;
+        }
+       
+    </style>
+</head>
+<body>
+    <div style="width: 1200px ;margin: 0 auto;">
+        <table style="margin-top: 100px;" border="1" cellspacing="0" cellpadding="5" id="table">
+            <tr>
+                <td>STT</td>
+                <td>Tên VKL</td>
+                <td>Hãng Sản Xuất</td>
+                <td>Ngày ra mắt</td>
+                <td>Giá(vnđ)</td>
+            </tr>
+        </table>
+
+        <div style="width: 400px;">
+            <div class="main" >
+                <form   action="#" method="post" id="form">
+                    <section>
+                       Tên VKL:  <input type="text" id="ten_vkl" name="ten_vkl" value="" class="input_mt"> <label id="lbl_ten" for=""></label> <br>
+                       Hãng:  <input type="text" id="hang" name="hang" value="" class="input_mt"> <label id="lbl_hang" for=""></label> <br>
+                       Ngày ra mắt:  <input type="date" id="date" name="ngayramat" value="" class="input_mt"> <label id="lbl_ngay" for=""></label> <br>
+                       Giá:  <input type="text" id="gia" name="gia" value="" class="input_mt"> <label id="lbl_gia" for=""></label> <br>
+                       <div id="btn_primary">
+                           <input type="button" name="conduct" value="Thêm" id="conduct">
+                           <input type="reset" name="cancel" value="hủy" id="cancel">
+                       </div>
+    
+                    </section>
+                 </form>
+            </div>
+        </div>
+    </div>
+    <script src="bai8.js"></script>
+</body>
+</html>
